@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
+    box-sizing: inherit;
+    font-size: 1.6rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #c9ced3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.2rem;
+}
+
+h2,
+h3 {
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+/* Container */
+.player-container {
+    width: 40rem;
+    padding: 2rem;
+    background-color: #e7e7e7;
+    border-radius: 2rem;
+    box-shadow: 0 1.5rem 3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+/* Image */
+.img-container {
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+    top: -7rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/* Progress */
+.progress-container {
+    width: 100%;
+    margin: 3rem 0;
+}
+
+.duration-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0.4rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+}
+
+.progress-bar:hover {
+    transform: scaleY(2);
+}
+
+.progress {
+    height: 100%;
+    background-color: #242323;
+    border-radius: 0.5rem;
+    /* change this to show progress */
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+/* Controls */
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.fas {
+    font-size: 3rem;
+    color: rgb(129, 129, 129);
+    cursor: pointer;
+    user-select: none;
+    transition: filter 0.1s linear;
+}
+
+.fas:hover {
+    filter: brightness(80%);
+}
+
+.main-button {
+    font-size: 4rem;
+    margin: 0 3rem;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+    .player-container {
+        width: 95vw;
+    }
+
+    .img-container {
+        left: 29px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .player-controls {
+        top: -10px;
+        left: 100px;
+    }
+}
